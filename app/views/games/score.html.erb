@@ -1,0 +1,23 @@
+<h1>Result</h1>
+
+<div class="mb-4">
+  <p>Here is the grid you had:</p>
+  <ul class="d-flex list-unstyled gap-2">
+    <% @letters.chars.each do |letter| %>
+      <li class="btn btn-primary disabled"><%= letter %></li>
+    <% end %>
+  </ul>
+</div>
+
+<p class="mb-1">
+  Your word: <strong><%= @word %></strong>
+</p>
+
+<p class="mb-3">
+  <%= @message %>
+</p>
+
+<p>This round score: <strong><%= @score %></strong></p>
+<p>Total score: <strong><%= @total_score %></strong></p>
+
+<%= link_to "Play again", new_path, class: "btn btn-primary" %>
